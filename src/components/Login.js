@@ -3,7 +3,7 @@ import styled from "styled-components";
 import WEBSITE_LOGO from '../images/login-logo.svg'
 import Side_IMG from '../images/login-hero.svg'
 import GOOGLE_IMAGE from '../images/google.svg'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 
 const Login = (props) => {
@@ -17,7 +17,7 @@ const Login = (props) => {
        
          <div>
            <Join>Join now</Join>
-          <Link to="/home"><Signin>Sign in</Signin></Link> 
+         <Signin>Sign in</Signin>
          </div>
        </Nav>
        <Section>
