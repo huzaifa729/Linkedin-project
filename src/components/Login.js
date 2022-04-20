@@ -3,16 +3,21 @@ import styled from "styled-components";
 import WEBSITE_LOGO from '../images/login-logo.svg'
 import Side_IMG from '../images/login-hero.svg'
 import GOOGLE_IMAGE from '../images/google.svg'
+// import { Link } from 'react-router-dom';
+
+
 const Login = (props) => {
   return(
      <Container>
        <Nav>
+         
          <a href="/">
            <img src={WEBSITE_LOGO} alt=''/>
          </a>
+       
          <div>
            <Join>Join now</Join>
-           <Signin>Sign in</Signin>
+         <Signin>Sign in</Signin>
          </div>
        </Nav>
        <Section>
