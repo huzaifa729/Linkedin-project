@@ -96,19 +96,20 @@ const Header = (props) => {
 const Container = styled.div`
   background-color: white;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  left: 0px;
+  left: 0;
   padding: 0 24px;
   position: fixed;
    top: 0; 
   width: 100vw;
   z-index: 100;
+
 `;
 
 const Content = styled.div`
    display: flex; 
   align-items: center;
   margin: 0 auto;
-   min-height: 100%; 
+  min-height: 100%;
   max-width: 1128px;
 
 `;
@@ -120,15 +121,15 @@ const Logo = styled.span`
 
 const Search = styled.div`
   opacity: 1;
-   flex-grow: 1; 
-   position: relative;
+  flex-grow: 1;
+  position: relative;
   & > div {
     max-width: 280px;
     input {
       border: none;
       box-shadow: none;
       background-color: #eef3f8;
-      border-radius: 5px;
+      border-radius: 2px;
       color: rgba(0,0,0,0.9);
       width: 218px;
       padding: 0 8px 0 40px;
@@ -137,7 +138,7 @@ const Search = styled.div`
       font-size: 14px;
       height: 34px;
       border-color: #dce6f1;
-     vertical-align: text-top; 
+      vertical-align: text-top;
     }
   }
 `;
@@ -171,7 +172,7 @@ display: block;
 
 const NavListWrap = styled.ul`
     display: flex;
-     flex-wrap: nowrap; 
+    flex-wrap: nowrap;
     list-style-type: none;
 
     .active{
