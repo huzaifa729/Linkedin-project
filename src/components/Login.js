@@ -4,7 +4,7 @@ import WEBSITE_LOGO from '../images/login-logo.svg'
 import Side_IMG from '../images/login-hero.svg'
 import GOOGLE_IMAGE from '../images/google.svg'
 // import { Link } from 'react-router-dom';
-
+import { connect } from "react-redux";
 
 const Login = (props) => {
   return(
@@ -172,7 +172,15 @@ const Google = styled.button`
       }
 `;
 
-export default Login;
+const mapStateToProps = (state) => {
+    return {};
+}
+
+const mapDispatchToProps = (dispatch) => ({});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
+
+//  export default Login;
 
 
 
