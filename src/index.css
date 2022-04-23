@@ -39,3 +39,7 @@ div,h1,h2,h3,h4,h5,h6,header,i,img,label,html,li,nav,p,span,small,ul{
 body{
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.mercado-match {
+  color: #70b5f9;
+}
