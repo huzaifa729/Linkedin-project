@@ -4,6 +4,7 @@ import Background_Photo from "../images/photo.svg";
 import Widget_Img from "../images/widget-icon.svg";
 import Item_Img from "../images/item-icon.svg";
 import Plus_Img from "../images/plus-icon.svg";
+import { connect } from "react-redux";
 const LetfSiide = (props) => {
   return (
     <Container>
@@ -12,7 +13,7 @@ const LetfSiide = (props) => {
           <CardBackground />
            <a>
              <Photo/>
-             <Link>Welcome, there!</Link>
+             <Link>Welcome, {props.user ? props.user.displayName : 'there!'}</Link>
         </a>  
         <a>
           <AddPhotoText>
@@ -218,4 +219,10 @@ const CommunityCard = styled(ArtCard)`
      }
 `;
 
-export default LetfSiide
+const mapStateToProps = (state)=>{
+  return{
+    user: state.userState.user,
+  }
+}
+
+export default connect(mapStateToProps)(LetfSiide);

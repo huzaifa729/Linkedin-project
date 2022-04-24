@@ -5,10 +5,17 @@ import Side_IMG from '../images/login-hero.svg'
 import GOOGLE_IMAGE from '../images/google.svg'
 // import { Link } from 'react-router-dom';
 import { connect } from "react-redux";
+import { signInAPI } from '../actions';
+import { Redirect } from 'react-router-dom';
+
 
 const Login = (props) => {
   return(
      <Container>
+        {
+          props.user &&
+          <Redirect to="/home"/>
+        }
        <Nav>
          
          <a href="/">
@@ -17,7 +24,7 @@ const Login = (props) => {
        
          <div>
            <Join>Join now</Join>
-         <Signin>Sign in</Signin>
+           <Signin>Sign in</Signin>
          </div>
        </Nav>
        <Section>
@@ -26,7 +33,7 @@ const Login = (props) => {
          <img src={Side_IMG}alt='iomn'/>
          </Hero>
          <Form>
-           <Google>
+           <Google onClick={()=> props.signIn()}>
            <img src={GOOGLE_IMAGE}alt='google'/>
            Sign in With Google
            </Google>
@@ -173,10 +180,16 @@ const Google = styled.button`
 `;
 
 const mapStateToProps = (state) => {
-    return {};
+    return {
+      user: state.userState.user,
+    };
 }
 
-const mapDispatchToProps = (dispatch) => ({});
+const mapDispatchToProps = (dispatch) => ({
+     signIn: () => dispatch(signInAPI()),
+});
+
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login);
 

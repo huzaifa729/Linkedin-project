@@ -9,6 +9,7 @@ import Like from "../images/like.svg";
 import Comment from "../images/comment.svg";
 import Share from "../images/share.svg";
 import Send from "../images/send.svg";
+import PostMoada from "./PostMoada";
 const Main = (props) => {
   return (
      <Container>
@@ -101,6 +102,7 @@ const Main = (props) => {
              </SocialAction>
          </Article>
        </div>
+       <PostMoada/>
      </Container>
   )
 }
